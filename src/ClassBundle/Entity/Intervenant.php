@@ -1,6 +1,7 @@
 <?php
 
 namespace ClassBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -115,4 +116,3 @@ class Intervenant
     }
     //////////////////////////////
 }
-
