@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
     <h1>Students list</h1>
 
-    <table>
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
@@ -38,4 +39,5 @@
             <a href="{{ path('student_new') }}">Create a new student</a>
         </li>
     </ul>
+</div>
 {% endblock %}

@@ -1,16 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
     <h1>Classe creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="form-group">
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <input class="btn btn-primary" type="submit" value="Create" />
+        {{ form_end(form) }}
+    </div>
+        <ul>
+            <li>
+                <a href="{{ path('classe_index') }}">Back to the list</a>
+            </li>
+        </ul>
 
-    <ul>
-        <li>
-            <a href="{{ path('classe_index') }}">Back to the list</a>
-        </li>
-    </ul>
+</div>
 {% endblock %}

@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
     <h1>Classe</h1>
 
-    <table>
+    <table class="table table-hover">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -20,17 +21,26 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('classe_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('classe_edit', { 'id': classe.id }) }}">Edit</a>
-        </li>
-        <li>
+    
+    
+    <div class="form-group">
+        
+            <a href="{{ path('classe_index') }}" class="btn btn-info">Back to the list</a>
+        
+    </div>
+    <div class="form-group">
+        
+            <a href="{{ path('classe_edit', { 'id': classe.id }) }}" class="btn btn-primary">Edit</a>
+        
+    </div>
+    <div class="form-group">    
+        
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete" class="btn btn-danger">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        
+    </div>
+    
+    
+</div>
 {% endblock %}

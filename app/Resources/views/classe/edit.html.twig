@@ -1,12 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
     <h1>Classe edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <div class="form-group">
+        {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <input class="btn btn-primary" type="submit" value="Edit" />
+        {{ form_end(edit_form) }}
+    </div>
 
     <ul>
         <li>
@@ -18,4 +21,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+</div>
 {% endblock %}

@@ -6,3 +6,7 @@ class:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+_assetic:
+  resource: .
+  type: assetic
