@@ -22,6 +22,14 @@ class Student
     private $id;
 
     /**
+     *
+     * @ORM\ManyToOne(targetEntity="Classe", inversedBy="students")
+     * @ORM\JoinColumn(name="classe_id", referencedColumnName="id")
+     */
+    private $classe;
+
+
+    /**
      * @var int
      *
      * @ORM\Column(name="n_place", type="integer")
@@ -92,6 +100,19 @@ class Student
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
+
+        return $this;
+    }
+
+
+    public function getClasse()
+    {
+        return $this->classe;
     }
 }
 

@@ -35,6 +35,12 @@ class Classe
      */
     private $placesNum;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="Student", mappedBy="classe")
+     */
+    private $students;
+
 ///////////////////////////////
      /**
      * @ORM\ManyToOne(targetEntity="Intervenant", inversedBy="classes")
@@ -42,6 +48,13 @@ class Classe
      */
      private $nameIntervenant;
 ///////////////////////////////////////////
+
+    public function __construct()
+    {
+        $this->students = new ArrayCollection();
+
+    }
+
     /**
      * Get id
      *
@@ -111,6 +124,15 @@ class Classe
       $this->nameIntervenant = $intervenant;
       return $this;
     }
+
+    /////////////////////////:
+
+    ////////////////////////////:
+
+    public function getStudents(){
+      return $this->students;
+    }
+
 
     /////////////////////////:
 }
